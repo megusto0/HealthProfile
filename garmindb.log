@@ -1,0 +1,545 @@
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\plugin_manager.py:Loading GarminDb plugins from C:\Users\hecol\/HealthData/HealthData5\Plugins
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\plugin.py:Loading plugins from C:\Users\hecol\/HealthData/HealthData5\Plugins
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\version.py:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py has been tested on Python 1...1...0
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\version.py:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py 1...1...0
+INFO:root:Enabled statistics: [<Statistics.monitoring: 1>, <Statistics.steps: 2>, <Statistics.itime: 3>, <Statistics.sleep: 4>, <Statistics.rhr: 5>, <Statistics.weight: 6>, <Statistics.activities: 7>]
+INFO:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py:___Downloading Latest Data___
+INFO:root:load session from C:\Users\hecol\.GarminDb\garth_session
+INFO:root:login: Руслан (ebc5597c-e6f9-4c1c-a8d4-e9be086b2937)
+INFO:root:Fetching 25 activities to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities
+INFO:root:get_activity_types: 'C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities'
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\download.py:Getting activities: 'C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities' (25) temp C:\Users\hecol\AppData\Local\Temp\tmplqu74b0e
+INFO:root:get_activity_summaries
+INFO:root:get_activities:   (15765783238)
+INFO:root:get_activities: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/activity_15765783238 <- {'activityId': 15765783238, 'activityName': 'Воткинск Велосипед', 'startTimeLocal': '2024-06-06 03:24:20', 'startTimeGMT': '2024-06-05 23:24:20', 'activityType': {'typeId': 2, 'typeKey': 'cycling', 'parentTypeId': 17, 'isHidden': False, 'trimmable': True, 'restricted': False}, 'eventType': {'typeId': 9, 'typeKey': 'uncategorized', 'sortOrder': 10}, 'distance': 48356.98828125, 'duration': 7449.72998046875, 'elapsedDuration': 7449.72998046875, 'movingDuration': 6959.9720458984375, 'elevationGain': 377.0460433959961, 'elevationLoss': 366.89012145996094, 'averageSpeed': 6.491000175476074, 'maxSpeed': 16.235000610351562, 'startLatitude': 57.06513421609998, 'startLongitude': 53.98625498637557, 'hasPolyline': True, 'hasImages': False, 'ownerId': 116186832, 'ownerDisplayName': 'ebc5597c-e6f9-4c1c-a8d4-e9be086b2937', 'ownerFullName': 'Руслан', 'ownerProfileImageUrlSmall': 'https://s3.amazonaws.com/garmin-connect-prod/profile_images/74494818-97de-4d95-9ebe-a22b952ed677-prth.png', 'ownerProfileImageUrlMedium': 'https://s3.amazonaws.com/garmin-connect-prod/profile_images/74494818-97de-4d95-9ebe-a22b952ed677-prfr.png', 'ownerProfileImageUrlLarge': 'https://s3.amazonaws.com/garmin-connect-prod/profile_images/74494818-97de-4d95-9ebe-a22b952ed677-prof.png', 'calories': 1219.0, 'bmrCalories': 189.0, 'averageHR': 157.0, 'maxHR': 179.0, 'userRoles': ['SCOPE_GOLF_API_READ', 'SCOPE_ATP_READ', 'SCOPE_DIVE_API_WRITE', 'SCOPE_COMMUNITY_COURSE_ADMIN_READ', 'SCOPE_DIVE_API_READ', 'SCOPE_DI_OAUTH_2_CLIENT_READ', 'SCOPE_CONNECT_WRITE', 'SCOPE_COMMUNITY_COURSE_WRITE', 'SCOPE_MESSAGE_GENERATION_READ', 'SCOPE_DI_OAUTH_2_CLIENT_REVOCATION_ADMIN', 'SCOPE_CONNECT_WEB_TEMPLATE_RENDER', 'SCOPE_CONNECT_NON_SOCIAL_SHARED_READ', 'SCOPE_CONNECT_READ', 'SCOPE_DI_OAUTH_2_TOKEN_ADMIN', 'ROLE_CONNECTUSER', 'ROLE_FITNESS_USER', 'ROLE_WELLNESS_USER'], 'privacy': {'typeId': 2, 'typeKey': 'private'}, 'userPro': False, 'hasVideo': False, 'timeZoneId': 353, 'beginTimestamp': 1717629860000, 'sportTypeId': 2, 'deviceId': 3449987972, 'minElevation': 73.0, 'maxElevation': 196.4384002685547, 'summarizedDiveInfo': {'summarizedDiveGases': []}, 'maxVerticalSpeed': 0.8235473632812501, 'manufacturer': 'GARMIN', 'locationName': 'Воткинск', 'lapCount': 7, 'endLatitude': 57.009066827595234, 'endLongitude': 53.9600068051368, 'minActivityLapDuration': 24.152000427246094, 'splitSummaries': [], 'hasSplits': False, 'pr': False, 'purposeful': False, 'manualActivity': False, 'autoCalcCalories': False, 'elevationCorrected': True, 'atpActivity': False, 'favorite': False, 'decoDive': False, 'parent': False}
+INFO:root:get_activities:   (15757531270)
+INFO:root:get_activities: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/activity_15757531270 <- {'activityId': 15757531270, 'activityName': 'Воткинск Велосипед', 'startTimeLocal': '2024-06-05 18:55:04', 'startTimeGMT': '2024-06-05 14:55:04', 'activityType': {'typeId': 2, 'typeKey': 'cycling', 'parentTypeId': 17, 'isHidden': False, 'trimmable': True, 'restricted': False}, 'eventType': {'typeId': 9, 'typeKey': 'uncategorized', 'sortOrder': 10}, 'distance': 9953.0, 'duration': 2043.116943359375, 'elapsedDuration': 2043.116943359375, 'movingDuration': 1870.0, 'elevationGain': 116.66415405273438, 'elevationLoss': 112.66415405273438, 'averageSpeed': 4.870999813079834, 'maxSpeed': 10.880000114440916, 'startLatitude': 57.06494880840182, 'startLongitude': 53.98753263987601, 'hasPolyline': True, 'hasImages': False, 'ownerId': 116186832, 'ownerDisplayName': 'ebc5597c-e6f9-4c1c-a8d4-e9be086b2937', 'ownerFullName': 'Руслан', 'ownerProfileImageUrlSmall': 'https://s3.amazonaws.com/garmin-connect-prod/profile_images/74494818-97de-4d95-9ebe-a22b952ed677-prth.png', 'ownerProfileImageUrlMedium': 'https://s3.amazonaws.com/garmin-connect-prod/profile_images/74494818-97de-4d95-9ebe-a22b952ed677-prfr.png', 'ownerProfileImageUrlLarge': 'https://s3.amazonaws.com/garmin-connect-prod/profile_images/74494818-97de-4d95-9ebe-a22b952ed677-prof.png', 'calories': 391.0, 'bmrCalories': 52.0, 'averageHR': 166.0, 'maxHR': 192.0, 'userRoles': ['SCOPE_GOLF_API_READ', 'SCOPE_ATP_READ', 'SCOPE_DIVE_API_WRITE', 'SCOPE_COMMUNITY_COURSE_ADMIN_READ', 'SCOPE_DIVE_API_READ', 'SCOPE_DI_OAUTH_2_CLIENT_READ', 'SCOPE_CONNECT_WRITE', 'SCOPE_COMMUNITY_COURSE_WRITE', 'SCOPE_MESSAGE_GENERATION_READ', 'SCOPE_DI_OAUTH_2_CLIENT_REVOCATION_ADMIN', 'SCOPE_CONNECT_WEB_TEMPLATE_RENDER', 'SCOPE_CONNECT_NON_SOCIAL_SHARED_READ', 'SCOPE_CONNECT_READ', 'SCOPE_DI_OAUTH_2_TOKEN_ADMIN', 'ROLE_CONNECTUSER', 'ROLE_FITNESS_USER', 'ROLE_WELLNESS_USER'], 'privacy': {'typeId': 2, 'typeKey': 'private'}, 'userPro': False, 'hasVideo': False, 'timeZoneId': 353, 'beginTimestamp': 1717599304000, 'sportTypeId': 2, 'deviceId': 3449987972, 'minElevation': 90.0, 'maxElevation': 189.5135498046875, 'summarizedDiveInfo': {'summarizedDiveGases': []}, 'maxVerticalSpeed': 1.3138084411621094, 'manufacturer': 'GARMIN', 'locationName': 'Воткинск', 'lapCount': 3, 'endLatitude': 57.07313809543848, 'endLongitude': 53.976595094427466, 'minActivityLapDuration': 1.3380000591278076, 'splitSummaries': [], 'hasSplits': False, 'pr': False, 'purposeful': False, 'manualActivity': False, 'autoCalcCalories': False, 'elevationCorrected': True, 'atpActivity': False, 'favorite': False, 'decoDive': False, 'parent': False}
+INFO:root:get_activities:   (15562897700)
+INFO:root:get_activities: skipping download of 15562897700, already present
+INFO:root:get_activities:   (15524154577)
+INFO:root:get_activities: skipping download of 15524154577, already present
+INFO:root:get_activities:   (15507810813)
+INFO:root:get_activities: skipping download of 15507810813, already present
+INFO:root:get_activities:   (15470834430)
+INFO:root:get_activities: skipping download of 15470834430, already present
+INFO:root:get_activities:   (15452972218)
+INFO:root:get_activities: skipping download of 15452972218, already present
+INFO:root:get_activities:   (15420465146)
+INFO:root:get_activities: skipping download of 15420465146, already present
+INFO:root:get_activities:   (15392065075)
+INFO:root:get_activities: skipping download of 15392065075, already present
+INFO:root:get_activities:   (15318804456)
+INFO:root:get_activities: skipping download of 15318804456, already present
+INFO:root:get_activities:   (15298090432)
+INFO:root:get_activities: skipping download of 15298090432, already present
+INFO:root:get_activities:   (15267828584)
+INFO:root:get_activities: skipping download of 15267828584, already present
+INFO:root:get_activities:   (15231722909)
+INFO:root:get_activities: skipping download of 15231722909, already present
+INFO:root:get_activities:   (15223271419)
+INFO:root:get_activities: skipping download of 15223271419, already present
+INFO:root:get_activities:   (15184344268)
+INFO:root:get_activities: skipping download of 15184344268, already present
+INFO:root:get_activities:   (15165870404)
+INFO:root:get_activities: skipping download of 15165870404, already present
+INFO:root:get_activities:   (15146068340)
+INFO:root:get_activities: skipping download of 15146068340, already present
+INFO:root:get_activities:   (15130144204)
+INFO:root:get_activities: skipping download of 15130144204, already present
+INFO:root:get_activities:   (15095088186)
+INFO:root:get_activities: skipping download of 15095088186, already present
+INFO:root:get_activities:   (15066669431)
+INFO:root:get_activities: skipping download of 15066669431, already present
+INFO:root:get_activities:   (15049308235)
+INFO:root:get_activities: skipping download of 15049308235, already present
+INFO:root:get_activities:   (15031386210)
+INFO:root:get_activities: skipping download of 15031386210, already present
+INFO:root:get_activities:   (15016595617)
+INFO:root:get_activities: skipping download of 15016595617, already present
+INFO:root:get_activities:   (14999234872)
+INFO:root:get_activities: skipping download of 14999234872, already present
+INFO:root:get_activities:   (14983136080)
+INFO:root:get_activities: skipping download of 14983136080, already present
+INFO:root:unzip_files: from C:\Users\hecol\AppData\Local\Temp\tmplqu74b0e to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities
+INFO:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py:Downloading latest monitoring data from: 2024-06-02 21:30:00
+INFO:root:Date range to update: 2024-06-01 (6) to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring
+INFO:root:Getting daily summaries: 2024-06-01 (6)
+INFO:root:get_summary_day: 2024-06-01
+INFO:root:get_summary_day: 2024-06-02
+INFO:root:get_summary_day: 2024-06-03
+INFO:root:get_summary_day: 2024-06-04
+INFO:root:get_summary_day: 2024-06-05
+INFO:root:get_summary_day: 2024-06-06
+INFO:root:Getting hydration: 2024-06-01 (6)
+INFO:root:Getting monitoring: 2024-06-01 (6)
+INFO:root:get_monitoring_day: 2024-06-01 to C:\Users\hecol\AppData\Local\Temp\tmpho80qq2d
+INFO:root:unzip_files: from C:\Users\hecol\AppData\Local\Temp\tmpho80qq2d to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring\2024
+INFO:root:get_monitoring_day: 2024-06-02 to C:\Users\hecol\AppData\Local\Temp\tmphdwb85s4
+INFO:root:unzip_files: from C:\Users\hecol\AppData\Local\Temp\tmphdwb85s4 to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring\2024
+INFO:root:get_monitoring_day: 2024-06-03 to C:\Users\hecol\AppData\Local\Temp\tmprdix5i_s
+INFO:root:unzip_files: from C:\Users\hecol\AppData\Local\Temp\tmprdix5i_s to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring\2024
+INFO:root:get_monitoring_day: 2024-06-04 to C:\Users\hecol\AppData\Local\Temp\tmp22x16r9f
+INFO:root:unzip_files: from C:\Users\hecol\AppData\Local\Temp\tmp22x16r9f to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring\2024
+INFO:root:get_monitoring_day: 2024-06-05 to C:\Users\hecol\AppData\Local\Temp\tmpwd6ufuh5
+INFO:root:unzip_files: from C:\Users\hecol\AppData\Local\Temp\tmpwd6ufuh5 to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring\2024
+INFO:root:get_monitoring_day: 2024-06-06 to C:\Users\hecol\AppData\Local\Temp\tmped9u6jyy
+INFO:root:unzip_files: from C:\Users\hecol\AppData\Local\Temp\tmped9u6jyy to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring\2024
+INFO:root:Saved monitoring files for 2024-06-01 (6) to C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring for processing
+INFO:idbutils.db_object:Found time_col_name timestamp for table Attributes
+INFO:idbutils.db_object:Found time_col_name timestamp for table Device
+INFO:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py:Downloading latest sleep data from: 2024-06-02
+INFO:root:Date range to update: 2024-06-01 (6) to C:\Users\hecol\/HealthData/HealthData5\Sleep
+INFO:root:Getting sleep: 2024-06-01 (6)
+INFO:root:Saved sleep files for 2024-06-01 (6) to C:\Users\hecol\/HealthData/HealthData5\Sleep for processing
+INFO:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py:Recent weight data not found, using: 2024-01-01 : 158
+INFO:root:Date range to update: 2024-01-01 (158) to C:\Users\hecol\/HealthData/HealthData5\Weight
+INFO:root:Getting weight: 2024-01-01 (158)
+INFO:root:Checking weight: 2024-01-01 overwite False
+INFO:root:Checking weight: 2024-01-02 overwite False
+INFO:root:Checking weight: 2024-01-03 overwite False
+INFO:root:Checking weight: 2024-01-04 overwite False
+INFO:root:Checking weight: 2024-01-05 overwite False
+INFO:root:Checking weight: 2024-01-06 overwite False
+INFO:root:Checking weight: 2024-01-07 overwite False
+INFO:root:Checking weight: 2024-01-08 overwite False
+INFO:root:Checking weight: 2024-01-09 overwite False
+INFO:root:Checking weight: 2024-01-10 overwite False
+INFO:root:Checking weight: 2024-01-11 overwite False
+INFO:root:Checking weight: 2024-01-12 overwite False
+INFO:root:Checking weight: 2024-01-13 overwite False
+INFO:root:Checking weight: 2024-01-14 overwite False
+INFO:root:Checking weight: 2024-01-15 overwite False
+INFO:root:Checking weight: 2024-01-16 overwite False
+INFO:root:Checking weight: 2024-01-17 overwite False
+INFO:root:Checking weight: 2024-01-18 overwite False
+INFO:root:Checking weight: 2024-01-19 overwite False
+INFO:root:Checking weight: 2024-01-20 overwite False
+INFO:root:Checking weight: 2024-01-21 overwite False
+INFO:root:Checking weight: 2024-01-22 overwite False
+INFO:root:Checking weight: 2024-01-23 overwite False
+INFO:root:Checking weight: 2024-01-24 overwite False
+INFO:root:Checking weight: 2024-01-25 overwite False
+INFO:root:Checking weight: 2024-01-26 overwite False
+INFO:root:Checking weight: 2024-01-27 overwite False
+INFO:root:Checking weight: 2024-01-28 overwite False
+INFO:root:Checking weight: 2024-01-29 overwite False
+INFO:root:Checking weight: 2024-01-30 overwite False
+INFO:root:Checking weight: 2024-01-31 overwite False
+INFO:root:Checking weight: 2024-02-01 overwite False
+INFO:root:Checking weight: 2024-02-02 overwite False
+INFO:root:Checking weight: 2024-02-03 overwite False
+INFO:root:Checking weight: 2024-02-04 overwite False
+INFO:root:Checking weight: 2024-02-05 overwite False
+INFO:root:Checking weight: 2024-02-06 overwite False
+INFO:root:Checking weight: 2024-02-07 overwite False
+INFO:root:Checking weight: 2024-02-08 overwite False
+INFO:root:Checking weight: 2024-02-09 overwite False
+INFO:root:Checking weight: 2024-02-10 overwite False
+INFO:root:Checking weight: 2024-02-11 overwite False
+INFO:root:Checking weight: 2024-02-12 overwite False
+INFO:root:Checking weight: 2024-02-13 overwite False
+INFO:root:Checking weight: 2024-02-14 overwite False
+INFO:root:Checking weight: 2024-02-15 overwite False
+INFO:root:Checking weight: 2024-02-16 overwite False
+INFO:root:Checking weight: 2024-02-17 overwite False
+INFO:root:Checking weight: 2024-02-18 overwite False
+INFO:root:Checking weight: 2024-02-19 overwite False
+INFO:root:Checking weight: 2024-02-20 overwite False
+INFO:root:Checking weight: 2024-02-21 overwite False
+INFO:root:Checking weight: 2024-02-22 overwite False
+INFO:root:Checking weight: 2024-02-23 overwite False
+INFO:root:Checking weight: 2024-02-24 overwite False
+INFO:root:Checking weight: 2024-02-25 overwite False
+INFO:root:Checking weight: 2024-02-26 overwite False
+INFO:root:Checking weight: 2024-02-27 overwite False
+INFO:root:Checking weight: 2024-02-28 overwite False
+INFO:root:Checking weight: 2024-02-29 overwite False
+INFO:root:Checking weight: 2024-03-01 overwite False
+INFO:root:Checking weight: 2024-03-02 overwite False
+INFO:root:Checking weight: 2024-03-03 overwite False
+INFO:root:Checking weight: 2024-03-04 overwite False
+INFO:root:Checking weight: 2024-03-05 overwite False
+INFO:root:Checking weight: 2024-03-06 overwite False
+INFO:root:Checking weight: 2024-03-07 overwite False
+INFO:root:Checking weight: 2024-03-08 overwite False
+INFO:root:Checking weight: 2024-03-09 overwite False
+INFO:root:Checking weight: 2024-03-10 overwite False
+INFO:root:Checking weight: 2024-03-11 overwite False
+INFO:root:Checking weight: 2024-03-12 overwite False
+INFO:root:Checking weight: 2024-03-13 overwite False
+INFO:root:Checking weight: 2024-03-14 overwite False
+INFO:root:Checking weight: 2024-03-15 overwite False
+INFO:root:Checking weight: 2024-03-16 overwite False
+INFO:root:Checking weight: 2024-03-17 overwite False
+INFO:root:Checking weight: 2024-03-18 overwite False
+INFO:root:Checking weight: 2024-03-19 overwite False
+INFO:root:Checking weight: 2024-03-20 overwite False
+INFO:root:Checking weight: 2024-03-21 overwite False
+INFO:root:Checking weight: 2024-03-22 overwite False
+INFO:root:Checking weight: 2024-03-23 overwite False
+INFO:root:Checking weight: 2024-03-24 overwite False
+INFO:root:Checking weight: 2024-03-25 overwite False
+INFO:root:Checking weight: 2024-03-26 overwite False
+INFO:root:Checking weight: 2024-03-27 overwite False
+INFO:root:Checking weight: 2024-03-28 overwite False
+INFO:root:Checking weight: 2024-03-29 overwite False
+INFO:root:Checking weight: 2024-03-30 overwite False
+INFO:root:Checking weight: 2024-03-31 overwite False
+INFO:root:Checking weight: 2024-04-01 overwite False
+INFO:root:Checking weight: 2024-04-02 overwite False
+INFO:root:Checking weight: 2024-04-03 overwite False
+INFO:root:Checking weight: 2024-04-04 overwite False
+INFO:root:Checking weight: 2024-04-05 overwite False
+INFO:root:Checking weight: 2024-04-06 overwite False
+INFO:root:Checking weight: 2024-04-07 overwite False
+INFO:root:Checking weight: 2024-04-08 overwite False
+INFO:root:Checking weight: 2024-04-09 overwite False
+INFO:root:Checking weight: 2024-04-10 overwite False
+INFO:root:Checking weight: 2024-04-11 overwite False
+INFO:root:Checking weight: 2024-04-12 overwite False
+INFO:root:Checking weight: 2024-04-13 overwite False
+INFO:root:Checking weight: 2024-04-14 overwite False
+INFO:root:Checking weight: 2024-04-15 overwite False
+INFO:root:Checking weight: 2024-04-16 overwite False
+INFO:root:Checking weight: 2024-04-17 overwite False
+INFO:root:Checking weight: 2024-04-18 overwite False
+INFO:root:Checking weight: 2024-04-19 overwite False
+INFO:root:Checking weight: 2024-04-20 overwite False
+INFO:root:Checking weight: 2024-04-21 overwite False
+INFO:root:Checking weight: 2024-04-22 overwite False
+INFO:root:Checking weight: 2024-04-23 overwite False
+INFO:root:Checking weight: 2024-04-24 overwite False
+INFO:root:Checking weight: 2024-04-25 overwite False
+INFO:root:Checking weight: 2024-04-26 overwite False
+INFO:root:Checking weight: 2024-04-27 overwite False
+INFO:root:Checking weight: 2024-04-28 overwite False
+INFO:root:Checking weight: 2024-04-29 overwite False
+INFO:root:Checking weight: 2024-04-30 overwite False
+INFO:root:Checking weight: 2024-05-01 overwite False
+INFO:root:Checking weight: 2024-05-02 overwite False
+INFO:root:Checking weight: 2024-05-03 overwite False
+INFO:root:Checking weight: 2024-05-04 overwite False
+INFO:root:Checking weight: 2024-05-05 overwite False
+INFO:root:Checking weight: 2024-05-06 overwite False
+INFO:root:Checking weight: 2024-05-07 overwite False
+INFO:root:Checking weight: 2024-05-08 overwite False
+INFO:root:Checking weight: 2024-05-09 overwite False
+INFO:root:Checking weight: 2024-05-10 overwite False
+INFO:root:Checking weight: 2024-05-11 overwite False
+INFO:root:Checking weight: 2024-05-12 overwite False
+INFO:root:Checking weight: 2024-05-13 overwite False
+INFO:root:Checking weight: 2024-05-14 overwite False
+INFO:root:Checking weight: 2024-05-15 overwite False
+INFO:root:Checking weight: 2024-05-16 overwite False
+INFO:root:Checking weight: 2024-05-17 overwite False
+INFO:root:Checking weight: 2024-05-18 overwite False
+INFO:root:Checking weight: 2024-05-19 overwite False
+INFO:root:Checking weight: 2024-05-20 overwite False
+INFO:root:Checking weight: 2024-05-21 overwite False
+INFO:root:Checking weight: 2024-05-22 overwite False
+INFO:root:Checking weight: 2024-05-23 overwite False
+INFO:root:Checking weight: 2024-05-24 overwite False
+INFO:root:Checking weight: 2024-05-25 overwite False
+INFO:root:Checking weight: 2024-05-26 overwite False
+INFO:root:Checking weight: 2024-05-27 overwite False
+INFO:root:Checking weight: 2024-05-28 overwite False
+INFO:root:Checking weight: 2024-05-29 overwite False
+INFO:root:Checking weight: 2024-05-30 overwite False
+INFO:root:Checking weight: 2024-05-31 overwite False
+INFO:root:Checking weight: 2024-06-01 overwite False
+INFO:root:Checking weight: 2024-06-02 overwite False
+INFO:root:Checking weight: 2024-06-03 overwite False
+INFO:root:Checking weight: 2024-06-04 overwite True
+INFO:root:Checking weight: 2024-06-05 overwite True
+INFO:root:Checking weight: 2024-06-06 overwite True
+INFO:root:Saved weight files for 2024-01-01 (158) to C:\Users\hecol\/HealthData/HealthData5\Weight for processing
+INFO:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py:Downloading latest rhr data from: 2024-06-02
+INFO:root:Date range to update: 2024-06-01 (6) to C:\Users\hecol\/HealthData/HealthData5\RHR
+INFO:root:Getting rhr: 2024-06-01 (6)
+INFO:root:Saved rhr files for 2024-06-01 (6) to C:\Users\hecol\/HealthData/HealthData5\RHR for processing
+INFO:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py:___Importing Latest Data___
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing user settings data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing profile data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles looking for files matching ^user-settings\.json
+INFO:root:Found 1 json files for ^user-settings\.json in C:\Users\hecol\/HealthData/HealthData5\FitFiles
+INFO:root:Processing 1 json files
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing profile data: {'measurement_system': 'DisplayMeasure.metric', 'gender': 'Gender.male', 'weight': 81.0, 'height': 1.8, 'vo2max_running': 38.0, 'vo2max_cycling': None, 'handedness': 'right'}
+INFO:root:DB updated with 7 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles/user-settings.json
+INFO:root:DB updated with 7 entries from 1 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing user personal information data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing profile data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles looking for files matching ^personal-information\.json
+INFO:root:Found 1 json files for ^personal-information\.json in C:\Users\hecol\/HealthData/HealthData5\FitFiles
+INFO:root:Processing 1 json files
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing profile data: {'locale': 'ru', 'time_zone': 'Europe/Samara', 'country_code': 'RU'}
+INFO:root:DB updated with 3 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles/personal-information.json
+INFO:root:DB updated with 3 entries from 1 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing user settings data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing profile data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles looking for files matching ^social-profile\.json
+INFO:root:Found 1 json files for ^social-profile\.json in C:\Users\hecol\/HealthData/HealthData5\FitFiles
+INFO:root:Processing 1 json files
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing profile data: {'id': 410553946, 'userName': 'ruslan00900@gmail.com', 'name': 'Руслан'}
+INFO:root:DB updated with 3 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles/social-profile.json
+INFO:root:DB updated with 3 entries from 1 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\fit_data.py:Processing [<FileType.settings: 2>] FIT data from C:\Users\hecol\/HealthData/HealthData5\FitFiles
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles looking for files matching \w+\.(fit|FIT)
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing weight data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\Weight looking for files matching weight_\d{4}-\d{2}-\d{2}\.json and created after 2024-06-06 04:31:38.884758
+INFO:root:Found 4 json files for weight_\d{4}-\d{2}-\d{2}\.json in C:\Users\hecol\/HealthData/HealthData5\Weight
+INFO:root:Processing 4 json files
+WARNING:root:No data saved for C:\Users\hecol\/HealthData/HealthData5\Weight/weight_2024-06-03.json
+WARNING:root:No data saved for C:\Users\hecol\/HealthData/HealthData5\Weight/weight_2024-06-04.json
+WARNING:root:No data saved for C:\Users\hecol\/HealthData/HealthData5\Weight/weight_2024-06-05.json
+WARNING:root:No data saved for C:\Users\hecol\/HealthData/HealthData5\Weight/weight_2024-06-06.json
+INFO:root:DB updated with 0 entries from 4 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing daily summary data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring looking for files matching daily_summary_\d{4}-\d{2}-\d{2}\.json and created after 2024-06-06 04:31:38.933464
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024 looking for files matching daily_summary_\d{4}-\d{2}-\d{2}\.json and created after 2024-06-06 04:31:38.933464
+INFO:root:Found 4 json files for daily_summary_\d{4}-\d{2}-\d{2}\.json in C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring
+INFO:root:Processing 4 json files
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/daily_summary_2024-06-03.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/daily_summary_2024-06-04.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/daily_summary_2024-06-05.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/daily_summary_2024-06-06.json
+INFO:root:DB updated with 4 entries from 4 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring looking for files matching hydration_\d{4}-\d{2}-\d{2}\.json and created after 2024-06-06 04:31:39.175979
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024 looking for files matching hydration_\d{4}-\d{2}-\d{2}\.json and created after 2024-06-06 04:31:39.175979
+INFO:root:Found 4 json files for hydration_\d{4}-\d{2}-\d{2}\.json in C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring
+INFO:root:Processing 4 json files
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/hydration_2024-06-03.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/hydration_2024-06-04.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/hydration_2024-06-05.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/hydration_2024-06-06.json
+INFO:root:DB updated with 4 entries from 4 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\fit_data.py:Processing [<FileType.monitoring_b: 32>] FIT data from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring looking for files matching \w+\.(fit|FIT) and created after 2024-06-06 04:31:39.271755
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024 looking for files matching \w+\.(fit|FIT) and created after 2024-06-06 04:31:39.271755
+INFO:root:Debug: 0
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/256890053679_WELLNESS.fit (2024-06-01 00:00:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>, <UnknownMessageType.unknown_211: 211>]
+INFO:root:skipping non-matching File(<FileType.metrics: 44> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/256890054703_METRICS.fit FileType.metrics [<MessageType.file_id: 0>, <MessageType.file_creator: 49>, <MessageType.device_info: 23>, <MessageType.local_time: 241>, <UnknownMessageType.unknown_229: 229>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/256890060286_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/256890511741_WELLNESS.fit (2024-06-01 00:44:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.event: 21>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/256890512467_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257113365849_WELLNESS.fit (2024-06-01 00:49:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257113368405_WELLNESS.fit (2024-06-01 23:43:46) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257113374477_WELLNESS.fit (2024-06-02 00:00:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>, <UnknownMessageType.unknown_211: 211>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257113400428_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257113402298_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257113407975_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257276873866_WELLNESS.fit (2024-06-02 03:04:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257276894553_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257322675382_WELLNESS.fit (2024-06-02 21:31:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>, <MessageType.event: 21>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257322682536_WELLNESS.fit (2024-06-03 00:00:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>, <UnknownMessageType.unknown_211: 211>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257322686980_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257322692724_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257467826259_WELLNESS.fit (2024-06-03 03:23:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.unknown_24: 24>, <MessageType.stress_level: 227>, <MessageType.event: 21>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257467828129_WELLNESS.fit (2024-06-03 20:26:14) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257467848880_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257467850414_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257469548423_WELLNESS.fit (2024-06-03 20:42:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.unknown_24: 24>, <MessageType.stress_level: 227>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257469550292_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257557330052_WELLNESS.fit (2024-06-03 20:53:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.event: 21>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257557343392_WELLNESS.fit (2024-06-04 00:00:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>, <UnknownMessageType.unknown_211: 211>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257557348610_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257557359478_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257687436858_WELLNESS.fit (2024-06-04 08:03:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257687462129_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257699898583_WELLNESS.fit (2024-06-04 22:02:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.event: 21>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257699900782_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257702176087_WELLNESS.fit (2024-06-04 23:24:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257702177350_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257709075736_WELLNESS.fit (2024-06-04 23:41:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257709077745_WELLNESS.fit (2024-06-05 00:00:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>, <UnknownMessageType.unknown_211: 211>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257709078882_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257709080094_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257796705932_WELLNESS.fit (2024-06-05 00:37:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.unknown_24: 24>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257796718007_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257799268619_WELLNESS.fit (2024-06-05 10:39:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257799270203_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257813161853_WELLNESS.fit (2024-06-05 10:55:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257813165341_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257814465878_WELLNESS.fit (2024-06-05 12:34:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257814466867_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257815004058_WELLNESS.fit (2024-06-05 12:45:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257815004949_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257871013642_WELLNESS.fit (2024-06-05 12:50:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.metrics: 44> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257871015907_METRICS.fit FileType.metrics [<MessageType.file_id: 0>, <MessageType.file_creator: 49>, <MessageType.device_info: 23>, <MessageType.local_time: 241>, <UnknownMessageType.unknown_229: 229>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257871029765_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257940190238_WELLNESS.fit (2024-06-05 19:29:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257940197283_WELLNESS.fit (2024-06-05 20:54:07) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257940204589_WELLNESS.fit (2024-06-06 00:00:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>, <UnknownMessageType.unknown_211: 211>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257940207349_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257940213091_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257940218884_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257948006374_WELLNESS.fit (2024-06-06 03:29:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257948008428_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257956887730_WELLNESS.fit (2024-06-06 04:21:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257956889615_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257958021678_WELLNESS.fit (2024-06-06 05:28:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257958022644_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257959445308_WELLNESS.fit (2024-06-06 05:38:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257959446570_WELLNESS.fit (2024-06-06 05:48:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257959447692_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257959448842_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257960302722_WELLNESS.fit (2024-06-06 05:50:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257960303573_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257968980264_WELLNESS.fit (2024-06-06 05:58:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257968982357_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_level: 275>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257970798732_WELLNESS.fit (2024-06-06 07:40:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257970799952_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257988069296_WELLNESS.fit (2024-06-06 07:57:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257988072808_WELLNESS.fit (2024-06-06 08:41:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_233: 233>, <MessageType.stress_level: 227>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257988074863_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/257988078545_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258010823956_WELLNESS.fit (2024-06-06 09:24:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258010826948_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258092985437_WELLNESS.fit (2024-06-06 11:28:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.event: 21>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258092997054_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258096149307_WELLNESS.fit (2024-06-06 21:21:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.event: 21>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>]
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258096151045_WELLNESS.fit (2024-06-06 21:28:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.stress_level: 227>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.unknown_24: 24>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258096152505_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258096154072_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.sleep_level: 275>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258128295036_WELLNESS.fit (2024-06-06 21:42:00) [FileType.monitoring_b] with message types: [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.software: 35>, <MessageType.monitoring_info: 103>, <MessageType.monitoring: 55>, <UnknownMessageType.unknown_211: 211>, <MessageType.ohr_settings: 188>, <MessageType.unknown_24: 24>, <MessageType.unknown_233: 233>, <MessageType.event: 21>, <MessageType.stress_level: 227>]
+INFO:root:skipping non-matching File(<FileType.sleep: 49> C:\Users\hecol\/HealthData/HealthData5\FitFiles\Monitoring/2024/258128299915_SLEEP_DATA.fit FileType.sleep [<MessageType.file_id: 0>, <MessageType.device_info: 23>, <MessageType.start: 273>, <MessageType.sleep_data: 274>, <MessageType.end: 276>, <MessageType.unknown_24: 24>] dev fields {})
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing sleep data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\Sleep looking for files matching sleep_\d{4}-\d{2}-\d{2}\.json and created after 2024-06-06 04:31:49.526652
+INFO:root:Found 4 json files for sleep_\d{4}-\d{2}-\d{2}\.json in C:\Users\hecol\/HealthData/HealthData5\Sleep
+INFO:root:Processing 4 json files
+INFO:root:Importing 2024-06-03 without REM data and UTC offset 0
+WARNING:root:Could not get sleep score for 2024-06-03
+WARNING:root:No data saved for C:\Users\hecol\/HealthData/HealthData5\Sleep/sleep_2024-06-03.json
+INFO:root:Importing 2024-06-04 without REM data and UTC offset 0
+WARNING:root:Could not get sleep score for 2024-06-04
+WARNING:root:No data saved for C:\Users\hecol\/HealthData/HealthData5\Sleep/sleep_2024-06-04.json
+INFO:root:Importing 2024-06-05 with REM data and UTC offset 14400.0
+WARNING:root:Could not get sleep score for 2024-06-05
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 15, 23) (datetime.datetime(2024, 6, 4, 11, 23)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 15, 27) (datetime.datetime(2024, 6, 4, 11, 27)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 15, 42) (datetime.datetime(2024, 6, 4, 11, 42)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 15, 45) (datetime.datetime(2024, 6, 4, 11, 45)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 15, 52) (datetime.datetime(2024, 6, 4, 11, 52)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 15, 56) (datetime.datetime(2024, 6, 4, 11, 56)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 16, 6) (datetime.datetime(2024, 6, 4, 12, 6)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 16, 7) (datetime.datetime(2024, 6, 4, 12, 7)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 16, 8) (datetime.datetime(2024, 6, 4, 12, 8)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 16, 11) (datetime.datetime(2024, 6, 4, 12, 11)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 16, 31) (datetime.datetime(2024, 6, 4, 12, 31)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 16, 36) (datetime.datetime(2024, 6, 4, 12, 36)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 17, 13) (datetime.datetime(2024, 6, 4, 13, 13)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 17, 55) (datetime.datetime(2024, 6, 4, 13, 55)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 18, 1) (datetime.datetime(2024, 6, 4, 14, 1)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 18, 8) (datetime.datetime(2024, 6, 4, 14, 8)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 18, 35) (datetime.datetime(2024, 6, 4, 14, 35)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 19, 19) (datetime.datetime(2024, 6, 4, 15, 19)) <RemSleepActivityLevels.awake: 3.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 19, 21) (datetime.datetime(2024, 6, 4, 15, 21)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 20, 27) (datetime.datetime(2024, 6, 4, 16, 27)) <RemSleepActivityLevels.awake: 3.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 4, 20, 28) (datetime.datetime(2024, 6, 4, 16, 28)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:DB updated with 21 entries from C:\Users\hecol\/HealthData/HealthData5\Sleep/sleep_2024-06-05.json
+INFO:root:Importing 2024-06-06 with REM data and UTC offset 14400.0
+WARNING:root:Could not get sleep score for 2024-06-06
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 20, 30) (datetime.datetime(2024, 6, 5, 16, 30)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 20, 43) (datetime.datetime(2024, 6, 5, 16, 43)) <RemSleepActivityLevels.awake: 3.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 20, 44) (datetime.datetime(2024, 6, 5, 16, 44)) <RemSleepActivityLevels.unmeasurable: -1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 20, 56) (datetime.datetime(2024, 6, 5, 16, 56)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 21, 31) (datetime.datetime(2024, 6, 5, 17, 31)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 21, 32) (datetime.datetime(2024, 6, 5, 17, 32)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 22, 9) (datetime.datetime(2024, 6, 5, 18, 9)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 22, 41) (datetime.datetime(2024, 6, 5, 18, 41)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 22, 58) (datetime.datetime(2024, 6, 5, 18, 58)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 23, 1) (datetime.datetime(2024, 6, 5, 19, 1)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 5, 23, 5) (datetime.datetime(2024, 6, 5, 19, 5)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 6, 0, 22) (datetime.datetime(2024, 6, 5, 20, 22)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 6, 0, 44) (datetime.datetime(2024, 6, 5, 20, 44)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 6, 1, 36) (datetime.datetime(2024, 6, 5, 21, 36)) <RemSleepActivityLevels.awake: 3.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 6, 1, 37) (datetime.datetime(2024, 6, 5, 21, 37)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 6, 1, 48) (datetime.datetime(2024, 6, 5, 21, 48)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 6, 1, 59) (datetime.datetime(2024, 6, 5, 21, 59)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 6, 2, 2) (datetime.datetime(2024, 6, 5, 22, 2)) <RemSleepActivityLevels.light_sleep: 1.0>
+INFO:root:Sleep event datetime.datetime(2024, 6, 6, 2, 26) (datetime.datetime(2024, 6, 5, 22, 26)) <RemSleepActivityLevels.rem_sleep: 2.0>
+INFO:root:DB updated with 19 entries from C:\Users\hecol\/HealthData/HealthData5\Sleep/sleep_2024-06-06.json
+INFO:root:DB updated with 40 entries from 4 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\import_monitoring.py:Processing rhr data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\RHR looking for files matching rhr_\d{4}-\d{2}-\d{2}\.json and created after 2024-06-06 04:31:50.154814
+INFO:root:Found 4 json files for rhr_\d{4}-\d{2}-\d{2}\.json in C:\Users\hecol\/HealthData/HealthData5\RHR
+INFO:root:Processing 4 json files
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\RHR/rhr_2024-06-03.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\RHR/rhr_2024-06-04.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\RHR/rhr_2024-06-05.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\RHR/rhr_2024-06-06.json
+INFO:root:DB updated with 4 entries from 4 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\garmin_tcx_data.py:Processing activities tcx data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities looking for files matching .*\.tcx and created after 2024-06-06 04:31:50.262018
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\garmin_json_data.py:Processing latest activities summary data from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities looking for files matching activity_\d*\.json and created after 2024-06-06 04:31:50.265097
+INFO:root:Found 2 json files for activity_\d*\.json in C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities
+INFO:idbutils.db_object:Found time_col_name start_time for table Activities
+INFO:idbutils.db_object:Found time_col_name start_time for table ActivityLaps
+INFO:idbutils.db_object:Found time_col_name timestamp for table ActivityRecords
+INFO:idbutils.db_object:Found time_col_name avg_pace for table StepsActivities
+INFO:root:Processing 2 json files
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/activity_15757531270.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/activity_15765783238.json
+INFO:root:DB updated with 2 entries from 2 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\garmin_json_data.py:Processing activities detail data
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities looking for files matching activity_details_\d*\.json and created after 2024-06-06 04:31:50.358074
+INFO:root:Found 2 json files for activity_details_\d*\.json in C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities
+INFO:root:Processing 2 json files
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/activity_details_15757531270.json
+INFO:root:DB updated with 1 entries from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/activity_details_15765783238.json
+INFO:root:DB updated with 2 entries from 2 files.
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\fit_data.py:Processing [<FileType.activity: 4>] FIT data from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\idbutils\file_processor.py:Reading directory: C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities looking for files matching \w+\.(fit|FIT) and created after 2024-06-06 04:31:50.431837
+INFO:root:Debug: 0
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/15757531270_ACTIVITY.fit (2024-06-05 18:55:04) [FileType.activity] with message types: [<MessageType.file_id: 0>, <MessageType.file_creator: 49>, <UnknownMessageType.unknown_288: 288>, <MessageType.event: 21>, <MessageType.device_info: 23>, <MessageType.source: 22>, <MessageType.unknown_141: 141>, <MessageType.device_settings: 2>, <MessageType.user_profile: 3>, <MessageType.sensor: 147>, <UnknownMessageType.unknown_79: 79>, <MessageType.sport: 12>, <MessageType.unknown_13: 13>, <MessageType.record: 20>, <MessageType.battery: 104>, <MessageType.lap: 19>, <MessageType.firstbeat: 140>, <MessageType.session: 18>, <MessageType.activity: 34>]
+INFO:root:Writing attribute: 0.0 -> 'active_time_zone' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DateMode.day_month: 0> -> 'date_mode' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: 0.0 -> 'time_zone' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DateMode.day_month: 0> -> 'date_format' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:user profile message: {'wake_time': datetime.time(3, 0, 42), 'sleep_time': datetime.time(19, 0), 'ts_41': datetime.datetime(2126, 2, 6, 6, 28, 15, tzinfo=datetime.timezone.utc), 'unknown_42': None, 'weight': 81.0, 'user_running_step_length': None, 'user_walking_step_length': None, 'unknown_33': None, 'unknown_37': None, 'unknown_38': None, 'gender': <Gender.male: 1>, 'height': 1.8, 'language': <Language.Russian: 18>, 'elev_setting': <DisplayMeasure.statute: 1>, 'weight_setting': <DisplayMeasure.statute: 1>, 'resting_heart_rate': 0.0, 'hr_setting': <DisplayHeart.max: 1>, 'speed_setting': <DisplayMeasure.statute: 1>, 'dist_setting': <DisplayMeasure.statute: 1>, 'activity_class': '70', 'position_setting': <DisplayPosition.degree_minute_second: 2>, 'temperature_setting': <DisplayMeasure.statute: 1>, 'year_of_birth': 2000, 'height_setting': <DisplayMeasure.statute: 1>, 'unknown_36': None, 'unknown_43': 0.0, 'unknown_44': 15.0, 'unknown_45': 10.0}
+INFO:root:Writing attribute: <Gender.male: 1> -> 'gender' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: 1.8 -> 'height' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: 81.0 -> 'weight' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: 2000 -> 'year_of_birth' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <Language.Russian: 18> -> 'language' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'dist_setting' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'weight_setting' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayPosition.degree_minute_second: 2> -> 'position_setting' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'elev_setting' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: datetime.time(19, 0) -> 'sleep_time' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: datetime.time(3, 0, 42) -> 'wake_time' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'speed_setting' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'measurement_system' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'measurement_system' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'measurement_system' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'measurement_system' at datetime.datetime(2024, 6, 5, 18, 55, 4)
+INFO:root:No entry handler _write_firstbeat_entry for known message type <MessageType.firstbeat: 140> (1) from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/15757531270_ACTIVITY.fit: DataMessage: <MessageType.firstbeat: 140>: {'timestamp': datetime.datetime(2024, 6, 5, 15, 29, 9, tzinfo=datetime.timezone.utc), 'unknown_2': 9889310.0, 'unknown_3': 9983200.0, 'unknown_5': 599641.0, 'unknown_6': 25103480.0, 'metamax': 706726, 'position_21': None, 'position_24': None, 'unknown_26': 9983200.0, 'unknown_27': 0.0, 'unknown_28': 0.0, 'unknown_29': 0.0, 'unknown_32': 8024319.0, 'unknown_35': 2043121.0, 'unknown_36': 990000.0, 'unknown_37': 12352841.0, 'unknown_38': 2369641.0, 'unknown_39': 12352841.0, 'unknown_40': 2369641.0, 'recovery_time': None, 'unknown_10': 6230.0, 'lactate_threshold_heart_rate': None, 'lactate_threshold_speed': None, 'unknown_16': None, 'unknown_0': 154.0, 'max_heart_rate': 0.0, 'aerobic_training_effect': 3.9, 'unknown_8': 0.0, 'unknown_11': 2.0, 'unknown_12': 0.0, 'unknown_13': 0.0, 'unknown_17': None, 'unknown_18': None, 'unknown_19': None, 'anaerobic_training_effect': 2.3, 'unknown_22': 12.0, 'unknown_23': 1.0, 'unknown_25': 16.0, 'unknown_30': -100.0, 'unknown_31': -1.0, 'unknown_33': 0.0, 'unknown_34': 0.0, 'unknown_41': 4.0}
+INFO:root:Importing C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/15765783238_ACTIVITY.fit (2024-06-06 03:24:20) [FileType.activity] with message types: [<MessageType.file_id: 0>, <MessageType.file_creator: 49>, <UnknownMessageType.unknown_288: 288>, <MessageType.event: 21>, <MessageType.device_info: 23>, <MessageType.source: 22>, <MessageType.unknown_141: 141>, <MessageType.device_settings: 2>, <MessageType.user_profile: 3>, <MessageType.sensor: 147>, <UnknownMessageType.unknown_79: 79>, <MessageType.sport: 12>, <MessageType.unknown_13: 13>, <MessageType.record: 20>, <MessageType.unknown_233: 233>, <MessageType.battery: 104>, <MessageType.lap: 19>, <MessageType.firstbeat: 140>, <MessageType.session: 18>, <MessageType.activity: 34>, <UnknownMessageType.unknown_113: 113>]
+INFO:root:Writing attribute: 0.0 -> 'active_time_zone' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DateMode.day_month: 0> -> 'date_mode' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: 0.0 -> 'time_zone' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DateMode.day_month: 0> -> 'date_format' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:user profile message: {'wake_time': datetime.time(3, 0, 42), 'sleep_time': datetime.time(19, 0), 'ts_41': datetime.datetime(2126, 2, 6, 6, 28, 15, tzinfo=datetime.timezone.utc), 'unknown_42': None, 'weight': 81.0, 'user_running_step_length': None, 'user_walking_step_length': None, 'unknown_33': None, 'unknown_37': None, 'unknown_38': None, 'gender': <Gender.male: 1>, 'height': 1.8, 'language': <Language.Russian: 18>, 'elev_setting': <DisplayMeasure.statute: 1>, 'weight_setting': <DisplayMeasure.statute: 1>, 'resting_heart_rate': 0.0, 'hr_setting': <DisplayHeart.max: 1>, 'speed_setting': <DisplayMeasure.statute: 1>, 'dist_setting': <DisplayMeasure.statute: 1>, 'activity_class': '70', 'position_setting': <DisplayPosition.degree_minute_second: 2>, 'temperature_setting': <DisplayMeasure.statute: 1>, 'year_of_birth': 2000, 'height_setting': <DisplayMeasure.statute: 1>, 'unknown_36': None, 'unknown_43': 0.0, 'unknown_44': 15.0, 'unknown_45': 10.0}
+INFO:root:Writing attribute: <Gender.male: 1> -> 'gender' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: 1.8 -> 'height' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: 81.0 -> 'weight' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: 2000 -> 'year_of_birth' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <Language.Russian: 18> -> 'language' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'dist_setting' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'weight_setting' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayPosition.degree_minute_second: 2> -> 'position_setting' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'elev_setting' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: datetime.time(19, 0) -> 'sleep_time' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: datetime.time(3, 0, 42) -> 'wake_time' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'speed_setting' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'measurement_system' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'measurement_system' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'measurement_system' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:Writing attribute: <DisplayMeasure.statute: 1> -> 'measurement_system' at datetime.datetime(2024, 6, 6, 3, 24, 20)
+INFO:root:No entry handler _write_firstbeat_entry for known message type <MessageType.firstbeat: 140> (1) from C:\Users\hecol\/HealthData/HealthData5\FitFiles\Activities/15765783238_ACTIVITY.fit: DataMessage: <MessageType.firstbeat: 140>: {'timestamp': datetime.datetime(2024, 6, 6, 1, 28, 33, tzinfo=datetime.timezone.utc), 'unknown_2': 7824364.0, 'unknown_3': 17542521.0, 'unknown_5': 144084.0, 'unknown_6': 74673030.0, 'metamax': 706726, 'position_21': None, 'position_24': None, 'unknown_26': 17542521.0, 'unknown_27': 0.0, 'unknown_28': 0.0, 'unknown_29': 0.0, 'unknown_32': 7048839.0, 'unknown_35': 7449735.0, 'unknown_36': 4830000.0, 'unknown_37': 20213200.0, 'unknown_38': 2670679.0, 'unknown_39': 20213200.0, 'unknown_40': 2670679.0, 'recovery_time': None, 'unknown_10': 6230.0, 'lactate_threshold_heart_rate': None, 'lactate_threshold_speed': None, 'unknown_16': None, 'unknown_0': 128.0, 'max_heart_rate': 0.0, 'aerobic_training_effect': 5.0, 'unknown_8': 0.0, 'unknown_11': 2.0, 'unknown_12': 0.0, 'unknown_13': 0.0, 'unknown_17': None, 'unknown_18': None, 'unknown_19': None, 'anaerobic_training_effect': 2.3, 'unknown_22': 14.0, 'unknown_23': 1.0, 'unknown_25': 6.0, 'unknown_30': -100.0, 'unknown_31': -1.0, 'unknown_33': 0.0, 'unknown_34': 0.0, 'unknown_41': 4.0}
+INFO:C:\Users\hecol\miniconda3\Scripts\garmindb_cli.py:___Analyzing Data___
+INFO:idbutils.db_object:Found time_col_name timestamp for table summary
+INFO:idbutils.db_object:Found time_col_name timestamp for table summary
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\analyze.py:Summary Tables Generation:
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\analyze.py:Generating table entries for 2023
+INFO:C:\Users\hecol\miniconda3\Lib\site-packages\garmindb\analyze.py:Generating table entries for 2024

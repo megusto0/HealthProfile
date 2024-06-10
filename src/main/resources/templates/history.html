@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{base}">
+<head>
+    <meta charset="UTF-8">
+    <title>Дневник</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .page-item {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .button {
+            cursor: pointer;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .add-button {
+            background-color: #6cace4;
+            color: white;
+        }
+        .edit-button, .delete-button {
+            background-color: #6cace4;
+            color: white;
+        }
+        .delete-button {
+            background-color:  #005b96;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<section layout:fragment="content">
+    <h2>Дневник</h2>
+    <button class="button add-button" onclick="openAddModal()">Добавить запись</button>
+    <table>
+        <thead>
+        <tr>
+            <th>Дата</th>
+            <th>Время</th>
+            <th>Уровень глюкозы (ммоль/л)</th>
+            <th>Доза инсулина (единицы)</th>
+            <th>Прием пищи</th>
+            <th>Углеводы (г)</th>
+            <th>Смена катетера</th>
+            <th>Смена ампулы</th>
+            <th>Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="entry : ${pagedEntries}">
+            <td th:text="${entry.date}"></td>
+            <td th:text="${entry.time}"></td>
+            <td th:text="${entry.glucoseLevel}"></td>
+            <td th:text="${entry.insulinDose}"></td>
+            <td th:text="${entry.foodIntake}"></td>
+            <td th:text="${entry.carbohydrates}"></td>
+            <td th:text="${entry.catheterChange != null and entry.catheterChange ? 'Да' : ''}"></td>
+            <td th:text="${entry.ampouleChange != null and entry.ampouleChange ? 'Да' : ''}"></td>
+            <td>
+                <button class="button edit-button"
+                        th:attr="data-id=${entry.id},
+                       data-date=${entry.date},
+                       data-time=${entry.time},
+                       data-glucoseLevel=${entry.glucoseLevel},
+                       data-insulinDose=${entry.insulinDose},
+                       data-foodIntake=${entry.foodIntake},
+                       data-carbohydrates=${entry.carbohydrates},
+                       data-catheterChange=${entry.catheterChange},
+                       data-ampouleChange=${entry.ampouleChange},
+                       data-userId=${entry.userId}">Редактировать</button>
+                <form th:action="@{/delete}" method="post" style="display:inline;">
+                    <input type="hidden" name="id" th:value="${entry.id}" />
+                    <button type="submit" class="button delete-button">Удалить</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="pagination">
+        <span class="page-item" th:each="i : ${#numbers.sequence(1, totalPages)}"
+              th:text="${i}" th:data-page="${i}"></span>
+    </div>
+
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editModal')">&times;</span>
+            <h2>Редактировать запись</h2>
+            <form id="editForm" method="post" th:action="@{/edit}">
+                <input type="hidden" id="editId" name="id">
+                <input type="hidden" id="editUserId" name="userId">
+                <label for="editDate">Дата:</label>
+                <input type="date" id="editDate" name="date" required><br><br>
+                <label for="editTime">Время:</label>
+                <input type="time" id="editTime" name="time" required><br><br>
+                <label for="editGlucoseLevel">Уровень глюкозы (ммоль/л):</label>
+                <input type="number" step="0.1" id="editGlucoseLevel" name="glucoseLevel"><br><br>
+                <label for="editInsulinDose">Доза инсулина (единицы):</label>
+                <input type="number" step="0.1" id="editInsulinDose" name="insulinDose"><br><br>
+                <label for="editFoodIntake">Прием пищи:</label>
+                <input type="text" id="editFoodIntake" name="foodIntake"><br><br>
+                <label for="editCarbohydrates">Углеводы (г):</label>
+                <input type="number" step="0.1" id="editCarbohydrates" name="carbohydrates"><br><br>
+                <label for="editCatheterChange">Смена катетера:</label>
+                <input type="checkbox" id="editCatheterChange" name="catheterChange"><br><br>
+                <label for="editAmpouleChange">Смена ампулы:</label>
+                <input type="checkbox" id="editAmpouleChange" name="ampouleChange"><br><br>
+                <button type="submit" class="button">Сохранить изменения</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addModal')">&times;</span>
+            <h2>Добавить запись</h2>
+            <form id="addForm" method="post" th:action="@{/add}">
+                <label for="addDate">Дата:</label>
+                <input type="date" id="addDate" name="date" required><br><br>
+                <label for="addTime">Время:</label>
+                <input type="time" id="addTime" name="time" required><br><br>
+                <label for="addGlucoseLevel">Уровень глюкозы (ммоль/л):</label>
+                <input type="number" step="0.1" id="addGlucoseLevel" name="glucoseLevel"><br><br>
+                <label for="addInsulinDose">Доза инсулина (единицы):</label>
+                <input type="number" step="0.1" id="addInsulinDose" name="insulinDose"><br><br>
+                <label for="addFoodIntake">Прием пищи:</label>
+                <input type="text" id="addFoodIntake" name="foodIntake"><br><br>
+                <label for="addCarbohydrates">Углеводы (г):</label>
+                <input type="number" step="0.1" id="addCarbohydrates" name="carbohydrates"><br><br>
+                <label for="addCatheterChange">Смена катетера:</label>
+                <input type="checkbox" id="addCatheterChange" name="catheterChange"><br><br>
+                <label for="addAmpouleChange">Смена ампулы:</label>
+                <input type="checkbox" id="addAmpouleChange" name="ampouleChange"><br><br>
+                <button type="submit" class="button add-button">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Document loaded");
+            const pageItems = document.querySelectorAll('.page-item');
+            const editButtons = document.querySelectorAll('.edit-button');
+            const closeBtns = document.querySelectorAll('.close');
+
+            pageItems.forEach(item => {
+                console.log("Adding event listener for page", item.getAttribute('data-page'));
+                item.addEventListener('click', function() {
+                    const pageNumber = this.getAttribute('data-page');
+                    console.log("Clicked page item:", pageNumber);
+                    goToPage(pageNumber);
+                });
+            });
+
+            editButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const id = this.getAttribute('data-id');
+                    const date = this.getAttribute('data-date');
+                    const time = this.getAttribute('data-time');
+                    const glucoseLevel = this.getAttribute('data-glucoseLevel');
+                    const insulinDose = this.getAttribute('data-insulinDose');
+                    const foodIntake = this.getAttribute('data-foodIntake');
+                    const carbohydrates = this.getAttribute('data-carbohydrates');
+                    const catheterChange = this.getAttribute('data-catheterChange') === 'true';
+                    const ampouleChange = this.getAttribute('data-ampouleChange') === 'true';
+                    const userId = this.getAttribute('data-userId');
+
+                    console.log("Clicked edit button for id:", id);
+                    openEditModal(id, date, time, glucoseLevel, insulinDose, foodIntake, carbohydrates, catheterChange, ampouleChange, userId);
+                });
+            });
+
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    closeModal(this.parentElement.parentElement.id);
+                });
+            });
+
+            window.onclick = function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = "none";
+                }
+            };
+        });
+
+        function goToPage(pageNumber) {
+            window.location.href = '/history?page=' + pageNumber;
+        }
+
+        function openEditModal(id, date, time, glucoseLevel, insulinDose, foodIntake, carbohydrates, catheterChange, ampouleChange, userId) {
+            document.getElementById('editId').value = id;
+            document.getElementById('editDate').value = date;
+            document.getElementById('editTime').value = time;
+            document.getElementById('editGlucoseLevel').value = glucoseLevel;
+            document.getElementById('editInsulinDose').value = insulinDose;
+            document.getElementById('editFoodIntake').value = foodIntake;
+            document.getElementById('editCarbohydrates').value = carbohydrates;
+            document.getElementById('editCatheterChange').checked = catheterChange;
+            document.getElementById('editAmpouleChange').checked = ampouleChange;
+            document.getElementById('editUserId').value = userId;
+
+            const modal = document.getElementById('editModal');
+            modal.style.display = "block";
+        }
+
+        function openAddModal() {
+            const now = new Date();
+            const formattedDate = now.toISOString().split('T')[0];
+            const formattedTime = now.toTimeString().split(' ')[0].slice(0, 5);
+
+            document.getElementById('addDate').value = formattedDate;
+            document.getElementById('addTime').value = formattedTime;
+
+            const modal = document.getElementById('addModal');
+            modal.style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+</section>
+</body>
+</html>

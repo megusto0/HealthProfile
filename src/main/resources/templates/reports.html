@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{base}">
+<head>
+    <title>Отчеты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+        }
+        h3 {
+            color: #495057;
+        }
+        h4 {
+            color: #6c757d;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #e9ecef;
+        }
+        .report-generation {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="date"] {
+            padding: 8px;
+            width: calc(100% - 18px);
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<section layout:fragment="content">
+    <h2>Отчеты</h2>
+
+    <div th:if="${startDate != null}">
+        <h3>Отчет за последние 30 дней</h3>
+
+        <h4>Натощак</h4>
+        <table>
+            <tr>
+                <th>Средний уровень глюкозы</th>
+                <td th:text="${#numbers.formatDecimal(fastingAverage, 1, 1)}"></td>
+            </tr>
+            <tr>
+                <th>Максимальный уровень глюкозы</th>
+                <td th:text="${#numbers.formatDecimal(fastingMax, 1, 1)}"></td>
+            </tr>
+            <tr>
+                <th>Минимальный уровень глюкозы</th>
+                <td th:text="${#numbers.formatDecimal(fastingMin, 1, 1)}"></td>
+            </tr>
+            <tr>
+                <th>Количество записей</th>
+                <td th:text="${fastingCount}"></td>
+            </tr>
+        </table>
+
+        <h4>После еды</h4>
+        <table>
+            <tr>
+                <th>Средний уровень глюкозы</th>
+                <td th:text="${#numbers.formatDecimal(postMealAverage, 1, 1)}"></td>
+            </tr>
+            <tr>
+                <th>Максимальный уровень глюкозы</th>
+                <td th:text="${#numbers.formatDecimal(postMealMax, 1, 1)}"></td>
+            </tr>
+            <tr>
+                <th>Минимальный уровень глюкозы</th>
+                <td th:text="${#numbers.formatDecimal(postMealMin, 1, 1)}"></td>
+            </tr>
+            <tr>
+                <th>Количество записей</th>
+                <td th:text="${postMealCount}"></td>
+            </tr>
+        </table>
+
+        <h4>Расходы за период</h4>
+        <table>
+            <tr>
+                <th>Количество измерений глюкозы</th>
+                <td th:text="${glucoseMeasurementsCount}"></td>
+            </tr>
+            <tr>
+                <th>Количество смен катетера</th>
+                <td th:text="${catheterChangesCount}"></td>
+            </tr>
+            <tr>
+                <th>Количество смен ампулы</th>
+                <td th:text="${ampouleChangesCount}"></td>
+            </tr>
+            <tr>
+                <th>Средняя доза инсулина за день</th>
+                <td th:text="${#numbers.formatDecimal(averageDailyInsulin, 1, 1)}"></td>
+            </tr>
+            <tr>
+                <th>Среднее количество измерений глюкозы в день</th>
+                <td th:text="${#numbers.formatDecimal(averageGlucoseMeasurementsPerDay, 1, 1)}"></td>
+            </tr>
+        </table>
+
+        <h4>Типичный день за период</h4>
+        <table>
+            <tr>
+                <th>Время</th>
+                <th>Уровень глюкозы</th>
+                <th>Доза инсулина</th>
+                <th>Углеводы</th>
+            </tr>
+            <tr th:each="timeSlot : ${typicalDayData}">
+                <td th:text="${timeSlot.timeOfDay}"></td>
+                <td th:text="${#numbers.formatDecimal(timeSlot.medianGlucose, 1, 1)}"></td>
+                <td th:text="${#numbers.formatDecimal(timeSlot.medianInsulin, 1, 1)}"></td>
+                <td th:text="${#numbers.formatDecimal(timeSlot.medianCarbs, 1, 1)}"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="report-generation">
+        <h3>Создать PDF отчет</h3>
+        <form id="reportForm" method="get" th:action="@{/report}">
+            <label for="startDate">Дата начала:</label>
+            <input type="date" id="startDate" name="startDate" required><br>
+            <label for="endDate">Дата окончания:</label>
+            <input type="date" id="endDate" name="endDate" required><br>
+            <button type="submit">Сгенерировать отчет</button>
+        </form>
+    </div>
+</section>
+</body>
+</html>

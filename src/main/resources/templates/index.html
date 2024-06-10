@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{base}">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Подключение Axios -->
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .chart-container {
+            width: 45%;
+        }
+        .date-picker {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .widgets {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .widget {
+            width: 20%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .widget h3 {
+            margin: 0 0 10px 0;
+        }
+        .widget p {
+            margin: 5px 0;
+        }
+        .full-width-chart {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .button {
+            cursor: pointer;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .button:focus {
+            outline: none;
+        }
+        .button:active {
+            transform: scale(0.98);
+        }
+        .show-button {
+            background-color: #6cace4;
+            color: white;
+        }
+        .update-button {
+            background-color: #6cace4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div layout:fragment="content">
+    <h2>График уровня глюкозы, доз инсулина и частоты сердцебиения</h2>
+    <form id="dateForm" th:action="@{/}" method="get">
+        <div class="date-picker">
+            <label for="startDate">Выберите дату:</label>
+            <input type="date" id="startDate" name="startDate" th:value="${startDate}" required>
+            <button type="button" class="button show-button" onclick="fetchData()">Показать</button> <!-- Изменено на button с onclick для вызова fetchData -->
+        </div>
+    </form>
+
+    <!-- Форма для вызова updateGarminData методом POST -->
+    <form th:action="@{/updateGarminData}" method="post" id="updateGarminForm">
+        <button type="submit" class="button update-button">Обновить данные Garmin</button>
+    </form>
+
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="healthChart" width="400" height="200"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="heartRateChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <div class="widgets">
+        <div class="widget">
+            <h3>Средний уровень сахара</h3>
+            <p>Последняя неделя: <span id="avgGlucoseWeek1"></span></p>
+            <p>Предыдущая неделя: <span id="avgGlucoseWeek2"></span></p>
+        </div>
+        <div class="widget">
+            <h3>Средний дневной инсулин</h3>
+            <p>Последняя неделя: <span id="avgInsulinWeek1"></span></p>
+            <p>Предыдущая неделя: <span id="avgInsulinWeek2"></span></p>
+        </div>
+        <div class="widget">
+            <h3>Максимальный уровень сахара</h3>
+            <p>Последняя неделя: <span id="maxGlucoseWeek1"></span></p>
+            <p>Предыдущая неделя: <span id="maxGlucoseWeek2"></span></p>
+        </div>
+        <div class="widget">
+            <h3>Минимальный уровень сахара</h3>
+            <p>Последняя неделя: <span id="minGlucoseWeek1"></span></p>
+            <p>Предыдущая неделя: <span id="minGlucoseWeek2"></span></p>
+        </div>
+    </div>
+
+    <div class="full-width-chart">
+        <canvas id="averageGlucoseChart" width="800" height="400"></canvas>
+    </div>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var glucoseChart, heartRateChart, averageGlucoseChart;
+
+        function fetchData() {
+            var startDate = document.getElementById('startDate').value;
+            axios.get('/data', {
+                params: {
+                    date: startDate
+                }
+            })
+                .then(function (response) {
+                    updateData(response.data);
+                })
+                .catch(function (error) {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function updateData(data) {
+            var healthData = data.healthData;
+            var heartRate = data.heartRateData;
+            var statsWeek1 = data.week1Stats;
+            var statsWeek2 = data.week2Stats;
+            var averageGlucoseData = data.averageGlucoseLevels;
+
+            updateWidgets(statsWeek1, statsWeek2);
+            updateCharts(healthData, heartRate, averageGlucoseData);
+        }
+
+        function updateWidgets(statsWeek1, statsWeek2) {
+            document.getElementById('avgGlucoseWeek1').textContent = statsWeek1.avgGlucose ? statsWeek1.avgGlucose.toFixed(2) : 'N/A';
+            document.getElementById('avgGlucoseWeek2').textContent = statsWeek2.avgGlucose ? statsWeek2.avgGlucose.toFixed(2) : 'N/A';
+            document.getElementById('avgInsulinWeek1').textContent = statsWeek1.avgInsulin ? statsWeek1.avgInsulin.toFixed(2) : 'N/A';
+            document.getElementById('avgInsulinWeek2').textContent = statsWeek2.avgInsulin ? statsWeek2.avgInsulin.toFixed(2) : 'N/A';
+            document.getElementById('maxGlucoseWeek1').textContent = statsWeek1.maxGlucose ? statsWeek1.maxGlucose.toFixed(2) : 'N/A';
+            document.getElementById('maxGlucoseWeek2').textContent = statsWeek2.maxGlucose ? statsWeek2.maxGlucose.toFixed(2) : 'N/A';
+            document.getElementById('minGlucoseWeek1').textContent = statsWeek1.minGlucose ? statsWeek1.minGlucose.toFixed(2) : 'N/A';
+            document.getElementById('minGlucoseWeek2').textContent = statsWeek2.minGlucose ? statsWeek2.minGlucose.toFixed(2) : 'N/A';
+        }
+
+        function updateCharts(healthData, heartRate, averageGlucoseData) {
+            var healthLabels = healthData.map(data => new Date(data.date + 'T' + data.time));
+            var glucoseLevels = healthData.map(data => data.glucoseLevel);
+            var insulinDoses = healthData.map(data => data.insulinDose !== null ? data.insulinDose : NaN);
+            var carbohydrates = healthData.map(data => data.carbohydrates !== null ? data.carbohydrates : NaN);
+            var heartRateLabels = heartRate.map(data => new Date(data.date + 'T' + data.time));
+            var heartRates = heartRate.map(data => data.heartRate);
+
+            glucoseChart.data.labels = healthLabels;
+            glucoseChart.data.datasets[0].data = glucoseLevels;
+            glucoseChart.data.datasets[1].data = insulinDoses;
+            glucoseChart.data.datasets[2].data = carbohydrates;
+            glucoseChart.update();
+
+            heartRateChart.data.labels = heartRateLabels;
+            heartRateChart.data.datasets[0].data = heartRates;
+            heartRateChart.update();
+
+            var averageGlucoseLabels = Object.keys(averageGlucoseData);
+            var averageGlucoseValues = Object.values(averageGlucoseData);
+
+            averageGlucoseChart.data.labels = averageGlucoseLabels;
+            averageGlucoseChart.data.datasets[0].data = averageGlucoseValues;
+            averageGlucoseChart.update();
+        }
+
+        window.onload = function() {
+            // Инициализация графиков при загрузке страницы
+            createCharts();
+            fetchData(); // Загрузка данных при загрузке страницы
+        };
+
+        function createCharts() {
+            var ctxGlucose = document.getElementById('healthChart').getContext('2d');
+            var ctxHeartRate = document.getElementById('heartRateChart').getContext('2d');
+            var ctxAverageGlucose = document.getElementById('averageGlucoseChart').getContext('2d');
+
+            glucoseChart = new Chart(ctxGlucose, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [
+                        {
+                            label: 'Уровень глюкозы (ммоль/л)',
+                            data: [],
+                            borderColor: 'rgb(255, 99, 132)',
+                            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                            fill: false,
+                            spanGaps: true,
+                            cubicInterpolationMode: 'monotone',
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Доза инсулина (единицы)',
+                            data: [],
+                            type: 'bar',
+                            borderColor: 'rgb(54, 162, 235)',
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            yAxisID: 'y1',
+                            order: 2,
+                            barThickness: 10,
+                            maxBarThickness: 15,
+                            categoryPercentage: 0.9
+                        },
+                        {
+                            label: 'Углеводы (г)',
+                            data: [],
+                            type: 'bar',
+                            borderColor: 'rgb(75, 192, 192)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                            yAxisID: 'y2',
+                            order: 3,
+                            barThickness: 10,
+                            maxBarThickness: 15,
+                            categoryPercentage: 0.9
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'hour',
+                                tooltipFormat: 'HH:mm',
+                                displayFormats: {
+                                    hour: 'HH:mm'
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Время'
+                            },
+                            ticks: {
+                                source: 'auto',
+                                autoSkip: true,
+                                maxTicksLimit: 8
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Уровень глюкозы (ммоль/л)'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Доза инсулина (единицы)'
+                            },
+                            grid: {
+                                drawOnChartArea: false
+                            }
+                        },
+                        y2: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Углеводы (г)'
+                            },
+                            grid: {
+                                drawOnChartArea: false
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Уровень глюкозы, дозы инсулина и потребленные углеводы'
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                    var label = tooltipItem.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += Math.round(tooltipItem.parsed.y * 100) / 100;
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            heartRateChart = new Chart(ctxHeartRate, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Частота сердечных сокращений (удары в минуту)',
+                        data: [],
+                        borderColor: 'rgb(255, 159, 64)',
+                        backgroundColor: 'rgba(255, 159, 64, 0.5)',
+                        fill: false,
+                        spanGaps: true,
+                        cubicInterpolationMode: 'monotone',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'hour',
+                                tooltipFormat: 'HH:mm',
+                                displayFormats: {
+                                    hour: 'HH:mm'
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Время'
+                            },
+                            ticks: {
+                                source: 'auto',
+                                autoSkip: true,
+                                maxTicksLimit: 8
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Частота сердечных сокращений (удары в минуту)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Частота сердечных сокращений'
+                        }
+                    }
+                }
+            });
+
+            averageGlucoseChart = new Chart(ctxAverageGlucose, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Средний уровень глюкозы (ммоль/л)',
+                        data: [],
+                        borderColor: 'rgb(153, 102, 255)',
+                        backgroundColor: 'rgba(153, 102, 255, 0.5)',
+                        fill: false,
+                        spanGaps: true,
+                        cubicInterpolationMode: 'monotone',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'week',
+                                tooltipFormat: 'yyyy-MM-dd',
+                                displayFormats: {
+                                    week: 'yyyy-MM-dd'
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Неделя'
+                            },
+                            ticks: {
+                                source: 'auto',
+                                autoSkip: true,
+                                maxTicksLimit: 8
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Средний уровень глюкозы (ммоль/л)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Средний уровень глюкозы по неделям'
+                        }
+                    }
+                }
+            });
+        }
+        /*]]>*/
+    </script>
+</div>
+</body>
+</html>

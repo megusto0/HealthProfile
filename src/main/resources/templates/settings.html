@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{base}">
+<head>
+    <title>Настройки</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+    <style>
+        form {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        form + form {
+            margin-top: 40px;
+        }
+        label, input, button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="file"], button {
+            margin-top: 10px;
+        }
+        #statusUpdate {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-family: monospace;
+        }
+        .button {
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .button:focus {
+            outline: none;
+        }
+        .button:active {
+            transform: scale(0.98);
+        }
+        .upload-button {
+            background-color:  #6cace4;
+            color: white;
+        }
+        .submit-button {
+            background-color: #6cace4 ;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<section layout:fragment="content">
+    <h2>Настройки</h2>
+    <div th:if="${message}" th:text="${message}"></div>
+    <h3>Выберите файл с данными глюкометра</h3>
+    <form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required />
+        <button type="submit" class="button upload-button">Загрузить файл</button>
+    </form>
+
+    <h3>Введите логин и пароль для подключения к Garmin Connect</h3>
+    <form th:action="@{/submitGarminData}" method="post">
+        <div>
+            <label for="login">Garmin Login:</label>
+            <input type="text" id="login" name="login" required>
+        </div>
+        <div>
+            <label for="password">Garmin Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="startDate">Введите дату, с которой нужно скачать данные (MM/dd/yyyy):</label>
+            <input type="text" id="startDate" name="startDate" required>
+        </div>
+        <button type="submit" class="button submit-button">Отправить</button>
+    </form>
+
+    <div id="statusUpdate">Ожидание подключения...</div>
+
+    <script>
+        var stompClient = null;
+        var previousStatus = "";
+
+        function connect() {
+            var socket = new SockJS('/gs-guide-websocket');
+            stompClient = Stomp.over(socket);
+            stompClient.connect({}, function(frame) {
+                console.log('Connected: ' + frame);
+                stompClient.subscribe('/topic/status', function(message) {
+                    console.log('Received message:', message.body);
+                    updateStatus(message.body);
+                });
+            }, function(error) {
+                console.error('Connection error:', error);
+            });
+        }
+
+        function updateStatus(message) {
+            console.log('Updating status with:', message);
+            var statusDiv = document.getElementById('statusUpdate');
+            if (!statusDiv) return;
+
+            statusDiv.textContent = message;
+        }
+
+        connect();
+    </script>
+</section>
+</body>
+</html>
